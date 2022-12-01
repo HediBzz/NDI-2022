@@ -18,12 +18,12 @@
         <article id="form-container">
             <form id="login-form" action="?page=login" method="post">
                 <div class="login-item">
-                    <label for="username">Nom d'utilisateur</label>
-                    <input type="text" name="username" id="username">
+                    <label for="usernameC">Nom d'utilisateur</label>
+                    <input type="text" name="usernameC" id="usernameC">
                 </div>
                 <div class="login-item">
-                    <label for="password">Mot de passe</label>
-                    <input type="password" name="password" id="password-login">
+                    <label for="passwordC">Mot de passe</label>
+                    <input type="passwordC" name="passwordC" id="passwordC-login">
                     <span class="form-item-icon-left material-symbols-outlined" id="password-visibility-login" onclick="visibility('passwordLogin')">visibility_off</span>
                 </div>
                 <div class="login-item">
@@ -32,17 +32,17 @@
             </form>
             <form id="register-form" action="?page=login" method="post">
                 <div class="login-item">
-                    <label for="username">Nom d'utilisateur</label>
-                    <input type="text" name="username" id="username">
+                    <label for="usernameI">Nom d'utilisateur</label>
+                    <input type="text" name="usernameI" id="usernameI">
                 </div>
                 <div class="login-item">
-                    <label for="password">Mot de passe</label>
-                    <input type="password" name="password" id="password">
+                    <label for="passwordI">Mot de passe</label>
+                    <input type="passwordI" name="passwordI" id="passwordI">
                     <span class="form-item-icon-left material-symbols-outlined" id="password-visibility" onclick="visibility('password')">visibility_off</span>
                 </div>
                 <div class="login-item">
                     <label for="passwordConfirm">Confirmer le mot de passe</label>
-                    <input type="password" name="passwordConfirm" id="passwordConfirm">
+                    <input type="passwordI" name="passwordConfirm" id="passwordConfirm">
                     <span class="form-item-icon-left material-symbols-outlined" id="password-confirm-visibility" onclick="visibility('confirmPassword')">visibility_off</span>
                 </div>
                 <div class="login-item">
