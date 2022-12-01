@@ -27,14 +27,14 @@ export class User {
       }
 
       playCard(card,enemy){
-        if (this.mana < card.manaCost){
-            return 0;
-        } 
-        card.action(enemy);
-
-      }
-      heal(damages){
-        this.setPv =  this.getPv + damages;
+        if (card.getManaCost > this.getMana){
+            console.log("non");
+            card.setJouable = false;
+        }else{
+            card.setJouable = true;
+            this.setMana = this.getMana - card.getManaCost
+            enemy.thisPv = enemy.getPv - card.getDamages;
+        }
       }
 
 }
