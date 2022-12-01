@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Title';
+    src: url(fonts/Pirata.ttf);
+}
+
+@font-face {
+    font-family: 'Desc';
+    src: url(fonts/Matrix.ttf);
+}
+
+#card{
+    width: 350px;
+    height: 500px;
+    background-color: rgb(229, 199, 188);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#background-card{
+    width: 320px;
+    height: 470px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+#title-card{
+    top : 10px;
+    font-family: 'Title';
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card-text, #horizontal-bar{
+    position: absolute;
+}
+
+#horizontal-bar{
+    top: 55px;
+    background-color: rgb(197, 130, 130, 0.5);
+    width: 200px;
+    height: 12px;
+    border-radius: 20px;
+}
