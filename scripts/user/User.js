@@ -1,4 +1,4 @@
-export class Enemy {
+export class User {
     pv;
     mana;
         
@@ -25,5 +25,17 @@ export class Enemy {
       set setMana(manaPt){
         this.mana = manaPt;
       }
+
+      playCard(card,enemy){
+        if (card.getManaCost > this.getMana){
+            console.log("non");
+            card.setJouable = false;
+        }else{
+            card.setJouable = true;
+            this.setMana = this.getMana - card.getManaCost
+            enemy.thisPv = enemy.getPv - card.getDamages;
+        }
+      }
+
 }
 

@@ -17,6 +17,10 @@
         <button><a href="?page=almanach">Almanach</a></button>
     </article>
 
+    <div id="bookC">
+        <img src="<?= PATH_IMAGES?>book_close.png" id="book"></img>
+    </div>
+
     
 </body>
 </html>
