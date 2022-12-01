@@ -25,9 +25,8 @@ define('PATH_TEXTES', './languages/');
 //sous dossiers
 define('PATH_CSS', PATH_ASSETS . 'css/');
 define('PATH_IMAGES', PATH_ASSETS . 'images/');
-define('PATH_SCRIPTS', PATH_ASSETS . 'scripts/');
+define('PATH_SCRIPTS', './scripts/');
 
 //fichiers
 define('PATH_LOGO', PATH_IMAGES . 'logo.png');
 define('PATH_MENU', PATH_VIEWS . 'menu.php');
-
