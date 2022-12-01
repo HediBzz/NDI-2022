@@ -26,8 +26,16 @@ export class User {
         this.mana = manaPt;
       }
 
-      attaque(enemy,damages){
-        enemy.setPv = enemy.getPv - damages
+      playCard(card,enemy){
+        if (this.mana < card.manaCost){
+            return 0;
+        } 
+        card.action(enemy);
+
       }
+      heal(damages){
+        this.setPv =  this.getPv + damages;
+      }
+
 }
 
