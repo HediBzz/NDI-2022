@@ -9,7 +9,7 @@ for(var i = 0; i < players.length; i++){
 
 
 var cards = document.querySelectorAll('.card');
-var nbMana = 5;
+var nbMana = 12;
 var manaContainer = document.querySelector('.mana');
 for(var i = 0; i < nbMana; i++){
     var mana = document.createElement('div');
@@ -58,7 +58,7 @@ function checkPlaying() {
         }
     }
     // If no card can be played, end the turn
-    if (document.querySelectorAll('.can-play').length == 0) {
+    if (document.querySelectorAll('.can-play').length == 1) {
         endTurn();
     }
     // If no card friendly, end the game
@@ -128,6 +128,7 @@ function endGame(state) {
         alert("You win !");
     }else{
         alert("You lose !");
+        window.location.reload();
     }
     location.reload();
 }
@@ -138,18 +139,18 @@ window.addEventListener('keyup', function(e){
     keys += e.key;
     // if keys contains "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba"
     if(keys.includes("ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba")){
-        nbMana = 150;
+        nbMana = 143;
         document.querySelector('.mana').style.minWidth = "400px";
         console.log("Konami Code entered");
         endTurn();
         checkPlaying();
+        konami();
     }
 });
 
 function konami(){
-    var cards = document.querySelectorAll('.card');
-    cards.forEach(function(card){
-        card.classList.add('enemy');
-    });
-    checkPlaying();
+    var capote = document.getElementById("card-1");
+    // Change the display of the card
+    capote.style.display = "flex";
+    console.log("Konami Coddzafezfezf");
 }
