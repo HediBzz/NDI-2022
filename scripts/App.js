@@ -133,13 +133,16 @@ function endGame(state) {
 }
 
 // Listen for key to check if the Konami Code is entered
-var keys = [];
+var keys;
 window.addEventListener('keyup', function(e){
-    keys.push(e.key);
-    keys.splice(-6, keys.length - 5);
-    console.log(keys);
-    if(keys.join('').includes('upupdowndownleftrightleftrightbastart')){
-        konami();
+    keys += e.key;
+    // if keys contains "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba"
+    if(keys.includes("ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba")){
+        nbMana = 150;
+        document.querySelector('.mana').style.minWidth = "400px";
+        console.log("Konami Code entered");
+        endTurn();
+        checkPlaying();
     }
 });
 
