@@ -62,5 +62,3 @@ const emptyUsernameAndEnableButton = () => {
     knight.removeEventListener('mouseout', disappearInstruction);
     knight.removeEventListener('click', emptyUsernameAndEnableButton);
 }
-
-moveKnight();

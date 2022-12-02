@@ -11,7 +11,7 @@ if(isset($_POST['login'])) {
 else if(isset($_POST['register'])) {
     $username = htmlspecialchars($_POST['usernameI']);
     $password = htmlspecialchars($_POST['passwordI']);
-    $passwordConfirm = htmlspecialchars($_POST['passwordConfirm']);
+    $passwordConfirm = htmlspecialchars($_POST['password']);
     if($password == $passwordConfirm) {
         register($username, $password);
     } else {
