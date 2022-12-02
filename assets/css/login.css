@@ -135,5 +135,5 @@ button {
 #register:disabled {
   cursor: default;
   background-color: rgb(168, 160, 160);
-  border : 2px solid #b58e8e;
+  border : 2px solid #3c3c3c;
 }

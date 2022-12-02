@@ -32,6 +32,7 @@ const animateKnight = () => {
 
 const endAnimation = () => {
     knightImg.src = PATH + "stop.png";
+    knightImg.style.cursor = "pointer";
     knight.addEventListener('mouseover', appearInstruction);
     knight.addEventListener('mouseout', disappearInstruction);
     knight.addEventListener('click', emptyUsernameAndEnableButton);
@@ -44,7 +45,7 @@ var bubble = null;
 const appearInstruction = () => {
     bubble = document.createElement('div');
     let bubbleText = document.createElement("p");
-    bubbleText.innerHTML = "Garde à toi! La propriété de ce pseudonyme est privée!";
+    bubbleText.innerHTML = "Gare à toi! La propriété de ce pseudonyme est privée!";
     bubble.appendChild(bubbleText);
     bubble.classList.add('bubble');
     knight.appendChild(bubble);
@@ -55,6 +56,7 @@ const disappearInstruction = () => {
 }
 
 const emptyUsernameAndEnableButton = () => {
+    knightImg.removeAttribute("style");
     document.getElementById('username2').value = "";
     registerButton.removeAttribute("disabled");
     knight.style.display = "none";
