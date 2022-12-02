@@ -137,7 +137,7 @@ function createNodeAlways(i) {
   } else {
     node.classList.add("node");
     node.classList.add("evenement");
-    a.href = "../views/event.php";
+    a.href = "../?page=arena";
     img.src = "../../assets/images/evenement.png";
     img.width = 50;
     img.height = 50;
