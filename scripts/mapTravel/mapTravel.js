@@ -28,7 +28,6 @@ function createMap() {
 
     if (i % 5 == 0) {
       var nodeRepos = createNodeAlways(i);
-      nodeRepos.className = "repos";
       column1.appendChild(nodeRepos);
       nodeRepos.classList.add("center");
       nodeRepos.classList.add(i);
@@ -180,54 +179,30 @@ function saveMap() {
   var allEvenement = document.getElementsByClassName("evenement");
   var allRepos = document.getElementsByClassName("repos");
 
-  var allCombatNumPos = "";
+  var url = "&";
 
-  for (var i = 0; i < allCombat.length; i++) {
-    allCombatNumPos +=
-      "combat" +
-      i +
-      "=" +
-      allCombat[i].className.split(" ")[0] +
-      "," +
-      allCombat[i].className.split(" ")[3] +
-      "," +
-      allCombat[i].className.split(" ")[2] +
-      "&";
+  var rows = document.getElementsByClassName("row");
+  for (var i = 0; i < rows.length; i++) {
+    url += i + "=";
+    var rowsChildren = rows[i].children;
+    for (var j = 0; j < rowsChildren.length; j++) {
+      var rowsChildrenChildren = rowsChildren[j].children;
+      if (rowsChildrenChildren.length == 0) {
+        url += "null";
+      } else {
+        url += rowsChildrenChildren
+          .item(0)
+          .className.split(".")[0]
+          .split(" ")[2];
+      }
+      if (j != 2) url += ",";
+    }
+    if (i != rows.length - 1) url += "&";
   }
 
-  var allEvenementNumPos = "";
+  console.log(url);
 
-  for (var i = 0; i < allEvenement.length; i++) {
-    allEvenementNumPos +=
-      "eve" +
-      i +
-      "=" +
-      allEvenement[i].className.split(" ")[0] +
-      "," +
-      allEvenement[i].className.split(" ")[3] +
-      "," +
-      allEvenement[i].className.split(" ")[2] +
-      "&";
-  }
-
-  var allReposNumPos = "";
-
-  for (var i = 0; i < allRepos.length; i++) {
-    allReposNumPos +=
-      "repos" +
-      i +
-      "=" +
-      allRepos[i].className.split(" ")[2] +
-      "," +
-      allRepos[i].className.split(" ")[1] +
-      "," +
-      allRepos[i].className.split(" ")[0] +
-      "&";
-  }
-
-  console.log(allCombatNumPos);
-  console.log(allEvenementNumPos);
-  console.log(allReposNumPos);
+  window.location.href = "?page=mapTravel" + url;
 }
 
-saveMap();
+// 0=combat,null,event
