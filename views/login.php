@@ -28,8 +28,8 @@
                 </div>
                 <div class="login-item">
                     <label for="password">Mot de passe</label>
-                    <input type="password" name="password" id="password-login">
-                    <span class="form-item-icon-left material-symbols-outlined" id="password-visibility-login" onclick="visibility('passwordLogin')">visibility_off</span>
+                    <input type="password" name="password" id="password1">
+                    <span class="form-item-icon-left material-symbols-outlined" id="password-visibility1" onclick="visibility('password', 1)">visibility_off</span>
                 </div>
                 <div class="login-item">
                     <button type="submit" name="login">Se connecter</button>
@@ -43,12 +43,12 @@
                 <div class="login-item">
                     <label for="password">Mot de passe</label>
                     <input type="password" name="password" id="password2">
-                    <span class="form-item-icon-left material-symbols-outlined" id="password-visibility" onclick="visibility('password')">visibility_off</span>
+                    <span class="form-item-icon-left material-symbols-outlined" id="password-visibility2" onclick="visibility('password', 2)">visibility_off</span>
                 </div>
                 <div class="login-item">
                     <label for="passwordConfirm">Confirmer le mot de passe</label>
-                    <input type="password" name="passwordConfirm" id="passwordConfirm2">
-                    <span class="form-item-icon-left material-symbols-outlined" id="password-confirm-visibility" onclick="visibility('confirmPassword')">visibility_off</span>
+                    <input type="password" name="password" id="password3">
+                    <span class="form-item-icon-left material-symbols-outlined" id="password-confirm3" onclick="visibility('password', 3)">visibility_off</span>
                 </div>
                 <div class="login-item">
                     <button id="register" type="submit" name="register">S'inscrire</button>
