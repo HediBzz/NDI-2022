@@ -49,14 +49,21 @@
                 <div class="login-item">
                     <label for="passwordConfirm">Confirmer le mot de passe</label>
                     <input type="password" name="password" id="password3">
-                    <span class="form-item-icon-left material-symbols-outlined" id="password-confirm3" onclick="visibility('password', 3)">visibility_off</span>
+                    <span class="form-item-icon-left material-symbols-outlined" id="password-visibility3" onclick="visibility('password', 3)">visibility_off</span>
                 </div>
                 <div class="login-item">
-                    <button id="register" type="submit" name="register">S'inscrire</button>
+                    <button id="register" type="submit" name="register" onclick="moveKnight()">S'inscrire</button>
                 </div>
             </form>
         </article>
     </div>
+    <?php require_once(PATH_MODELS) ?>
+    <?php function appearKnight() { ?>
+        <script>
+            document.getElementById("knight").style.display = "block";
+            moveKnight();
+        </script>
+    <?php } ?>
 
 </body>
 
