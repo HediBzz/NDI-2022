@@ -14,6 +14,19 @@
 </head>
 
 <body>
+<?php
+    if($fail) {
+        ?>
+        <script>
+                var script = document.createElement('script');
+                script.src = "scripts/login/loadAnim.js";
+                document.body.appendChild(script);
+                console.log("loadAnim.js loaded");
+            
+        </script>
+        <?php
+    }
+    ?>
     <div id="container-login">
         <h1>NOM DU JEU</h1>
         <article id="form-container">
@@ -54,11 +67,7 @@
                 </div>
             </form>
         </article>
-        <script>
-            if(true) {
-                document.appendChild("<script src='scripts/login/loadAnim.js' defer>");
-            }
-        </script>
+        
     </div>
 </body>
 

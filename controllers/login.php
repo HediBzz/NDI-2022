@@ -1,5 +1,7 @@
 <?php
 
+$fail = false;
+
 require_once(PATH_MODELS . 'login.php');
 require_once(PATH_MODELS . 'register.php');
 
@@ -13,11 +15,10 @@ else if(isset($_POST['register'])) {
     $password = htmlspecialchars($_POST['passwordI']);
     $passwordConfirm = htmlspecialchars($_POST['password']);
     if($password == $passwordConfirm) {
-        register($username, $password);
+        $fail = register($username, $password);
     } else {
-        echo "Passwords don't match";
+        $fail = true;
     }
 }
-
 
 require_once(PATH_VIEWS . 'login.php');

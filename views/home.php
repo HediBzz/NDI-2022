@@ -18,16 +18,16 @@
     </div>
 
     <div id=croix1C>
-        <img src="<?= PATH_IMAGES?>croix.png" id="croix1" draggable="false"></img>
+        <img src="<?= PATH_IMAGES?>croix.png" id="croix1" draggable="false" onclick="window.location.href='?page=arena'"></img>
     </div>
     <div id=croix2C>
-        <img src="<?= PATH_IMAGES?>croix.png" id="croix2" draggable="false"></img>
+        <img src="<?= PATH_IMAGES?>croix.png" id="croix2" draggable="false" onclick="window.location.href='?page=rules'"></img>
     </div>
     <div id=croix3C>
-        <img src="<?= PATH_IMAGES?>croix.png" id="croix3" draggable="false"></img>
+        <img src="<?= PATH_IMAGES?>croix.png" id="croix3" draggable="false" onclick="window.location.href='?page=login'"></img>
     </div>
     <div id=croix4C>
-        <img src="<?= PATH_IMAGES?>croix.png" id="croix4" draggable="false"></img>
+        <img src="<?= PATH_IMAGES?>croix.png" id="croix4" draggable="false" onclick="window.location.href='?page=almanach'"></img>
     </div>
 
     <script src="<?= PATH_SCRIPTS?>home.js"></script>

@@ -12,8 +12,7 @@ function register($username, $password) {
     $userInfo = $req->fetch();
     if($userInfo) {
         // If the username is already taken, redirect to the register page
-        echo "Username already taken";
-        appearKnight();
+        return true;
     } else {
         // If the username is not taken, hash the password and insert the user in the database
         $hash = password_hash($password, PASSWORD_DEFAULT);
@@ -23,6 +22,6 @@ function register($username, $password) {
             'password' => $hash
         ));
         // Redirect to the login page*
-        echo "User created";
     }
+    return false;
 }
