@@ -100,7 +100,27 @@ foreach($friends as $card) {
     $i++;
 }
 ?>
-            <div class="mana">
+<section style="display: none" id="card-1" class="card<?= $capote["id"]?> card friend" value=<?php echo $capote['image'] ?>>
+    <div class="card-header">
+        <p class="card-price item"><?= $capote['price'] ?></p>
+        <p class="card-title"><?= $capote['title'] ?></p>
+    </div>
+    
+    <div class="card-footer">
+        <p class="card-description"><?= $capote['description'] ?></p>
+        <div class="items-container">
+            <?php
+            if($capote['isEntity']) {
+                ?>
+                <p class="card-HP item"><?= $capote['hp'] ?></p>
+                <?php
+            }
+            ?>
+            <p class="card-attack item"><?= $capote['attack'] ?></p>
+        </div>
+    </div>
+</section>
+        <div class="mana">
             </div>
         <article>
 

@@ -7,9 +7,13 @@ const BD_HOST = 'localhost';
 //const BD_HOST = 'localhost';
 const BD_DBNAME = 'nuit_info';
 const BD_USER = 'root';
-const BD_PWD = '';
-//const BD_PWD = 'root';
+<<<<<<< HEAD
+//const BD_PWD = '';
+const BD_PWD = 'root';
 
+=======
+const BD_PWD = '';
+>>>>>>> 6a45c4fbddd4d0561fa1fd61cbc23e86e8fbc6c8
 // Langue du site
 const LANG = 'FR-fr';
 
