@@ -7,7 +7,7 @@ const BD_HOST = 'localhost';
 //const BD_HOST = 'localhost';
 const BD_DBNAME = 'nuit_info_3.sql';
 const BD_USER = 'root';
-const BD_PWD = '';
+const BD_PWD = 'root';
 //const BD_PWD = 'root';
 
 // Langue du site

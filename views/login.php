@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=<?php echo PATH_CSS . "main.css" ?>>
     <link rel="stylesheet" href=<?php echo PATH_CSS . "login.css" ?>>
+    <link rel="stylesheet" href="knight.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="<?= PATH_SCRIPTS ?>login/login.js" defer></script>
+    <script src="views/animations.js" defer></script>
     <title>Accueil</title>
 </head>
 
@@ -16,6 +18,9 @@
     <div id="container-login">
         <h1>NOM DU JEU</h1>
         <article id="form-container">
+            <div id="knight">
+            <img src="assets/images/knight/walking1.png" alt="" draggable="false">
+            </div>
             <form id="login-form" action="?page=login" method="post">
                 <div class="login-item">
                     <label for="usernameC">Nom d'utilisateur</label>
