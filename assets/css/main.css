@@ -12,3 +12,11 @@ button a {
     color: white;
     text-decoration: none;
 }
+
+#logo{
+    position: absolute;
+    left : 10px;
+    top : 10px;
+    width : 100px;
+    height : 100px;
+}

@@ -9,6 +9,7 @@
     <title>Accueil</title>
 </head>
 <body>
+    <img src="<?php PATH_ASSETS?>images/logo.png" alt="" id="logo">
     <div id="bookC">
         <img src="<?= PATH_IMAGES?>book_close.png" id="book" onclick = "lancerMenu()" draggable="false"></img>
     </div>

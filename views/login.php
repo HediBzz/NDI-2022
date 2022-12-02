@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <img src="<?php PATH_ASSETS?>images/logo.png" alt="" id="logo">
 <?php
     if($fail) {
         ?>

@@ -21,4 +21,5 @@ else if(isset($_POST['register'])) {
     }
 }
 
+
 require_once(PATH_VIEWS . 'login.php');

@@ -15,7 +15,7 @@
 </head>
 
 <body>
-
+    <img src="<?php PATH_ASSETS?>images/logo.png" alt="" id="logo">
         <article class="deck">
         <div class="hero-infos">
                 <div class="hero enemy" value="<?= $boss['image'] ?>">
@@ -23,8 +23,6 @@
                 </div>
                 <h2><?= $boss['name'] ?></h2>
             </div>
-
-
 <?php
 $i = 0;
 foreach($enemies as $card) {

@@ -4,7 +4,7 @@
 <?php
 foreach($cards as $card) {
     ?>
-    
+    <img src="<?php PATH_ASSETS?>images/logo.png" alt="" id="logo">
     <section id="card<?= $card["id"]?>" class="card" value=<?php echo $card['image'] ?>>
         <div class="card-header">
             <p class="card-price item"><?= $card['price'] ?></p>
