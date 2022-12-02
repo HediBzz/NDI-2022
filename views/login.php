@@ -19,7 +19,7 @@
         <h1>NOM DU JEU</h1>
         <article id="form-container">
             <div id="knight">
-            <img src="assets/images/knight/walking1.png" alt="" draggable="false">
+                <img id="knight-img" src="assets/images/knight/walking1.png" draggable="false">
             </div>
             <form id="login-form" action="?page=login" method="post">
                 <div class="login-item">
@@ -27,9 +27,15 @@
                     <input type="text" name="usernameC" id="usernameC">
                 </div>
                 <div class="login-item">
+<<<<<<< HEAD
                     <label for="passwordC">Mot de passe</label>
                     <input type="passwordC" name="passwordC" id="passwordC-login">
                     <span class="form-item-icon-left material-symbols-outlined" id="password-visibility-login" onclick="visibility('passwordLogin')">visibility_off</span>
+=======
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" id="password1">
+                    <span class="form-item-icon-left material-symbols-outlined" id="password-visibility1" onclick="visibility('password', 1)">visibility_off</span>
+>>>>>>> 829b68f10bffd6c697e081f86425f8159e0292c5
                 </div>
                 <div class="login-item">
                     <button type="submit" name="login">Se connecter</button>
@@ -37,6 +43,7 @@
             </form>
             <form id="register-form" action="?page=login" method="post">
                 <div class="login-item">
+<<<<<<< HEAD
                     <label for="usernameI">Nom d'utilisateur</label>
                     <input type="text" name="usernameI" id="usernameI">
                 </div>
@@ -49,9 +56,23 @@
                     <label for="passwordConfirm">Confirmer le mot de passe</label>
                     <input type="passwordI" name="passwordConfirm" id="passwordConfirm">
                     <span class="form-item-icon-left material-symbols-outlined" id="password-confirm-visibility" onclick="visibility('confirmPassword')">visibility_off</span>
+=======
+                    <label for="username">Nom d'utilisateur</label>
+                    <input type="text" name="username" id="username2">
                 </div>
                 <div class="login-item">
-                    <button type="submit" name="register">S'inscrire</button>
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" id="password2">
+                    <span class="form-item-icon-left material-symbols-outlined" id="password-visibility2" onclick="visibility('password', 2)">visibility_off</span>
+                </div>
+                <div class="login-item">
+                    <label for="passwordConfirm">Confirmer le mot de passe</label>
+                    <input type="password" name="password" id="password3">
+                    <span class="form-item-icon-left material-symbols-outlined" id="password-confirm3" onclick="visibility('password', 3)">visibility_off</span>
+>>>>>>> 829b68f10bffd6c697e081f86425f8159e0292c5
+                </div>
+                <div class="login-item">
+                    <button id="register" type="submit" name="register">S'inscrire</button>
                 </div>
             </form>
         </article>

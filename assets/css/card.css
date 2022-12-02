@@ -75,6 +75,10 @@ body {
     height: 98vh;
     justify-content: space-between;
     align-items: space-between;
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .card-HP {
@@ -138,7 +142,27 @@ body {
 }
 
 .mana {
-    
+    display: flex;
+    max-width: 100px;
+    height: 25px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+.hero-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.mana-item {
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/price.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 2px;
 }
 
 .items-container {
