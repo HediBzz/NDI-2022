@@ -15,11 +15,11 @@
 </head>
 
 <body>
-    <div>
 
-    
-    <h1>Enemie :</h1>
         <article class="deck">
+        <div class="hero" value="sida.png">
+            <h2>PV : 100</h2>
+            </div>
 
 
 <?php
@@ -56,8 +56,11 @@ foreach($enemies as $card) {
 ?>
         </article>
 
-        <h1>Deck :</h1>
         <article class="deck">
+            <div class="hero" value="player.png">
+                <h2>PV : 100</h2>
+            </div>
+
 
 
 <?php
@@ -90,8 +93,9 @@ foreach($friends as $card) {
     $i++;
 }
 ?>
+            <div class="mana">
+            </div>
         <article>
-    </div>
 
 </body>
 

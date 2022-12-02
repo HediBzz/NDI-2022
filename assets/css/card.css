@@ -8,15 +8,14 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     margin: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: 0.3s;
     color: #fff;
+    border: 3px solid #fff;
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: 3px solid rgb(64, 62, 62);
 }
 
 .card:hover {
@@ -57,7 +56,25 @@
 }
 
 .card-price {
-    background-color: #595de5;
+    background-image: url(../images/price.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-attack {
+    background-image: url(../images/attack.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
+    justify-content: space-between;
+    align-items: space-between;
 }
 
 .card-HP {
@@ -120,6 +137,10 @@
     padding-bottom: 10px;
 }
 
+.mana {
+    
+}
+
 .items-container {
     display: flex;
     flex-direction: row;
@@ -166,4 +187,28 @@
     100% {
         box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
     }
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #3c3c3c;
+    border-radius: 10px;
+    color: #fff;
+    width: fit-content;
+    padding: 8px;
+}
+
+.hero {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid rgb(64, 62, 62);
 }
