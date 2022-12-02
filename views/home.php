@@ -18,9 +18,9 @@
     </article>
 
     <div id="bookC">
-        <img src="<?= PATH_IMAGES?>book_close.png" id="book"></img>
+        <img src="<?= PATH_IMAGES?>book_close.png" id="book" onclick = "lancerMenu()" draggable="false"></img>
     </div>
 
-    
+    <script src="<?= PATH_SCRIPTS?>home.js"></script>
 </body>
 </html>
