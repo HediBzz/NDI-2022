@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="knight.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="<?= PATH_SCRIPTS ?>login/login.js" defer></script>
+    <script src="<?= PATH_SCRIPTS ?>login/animations.js" defer></script>
     <script src="views/animations.js" defer></script>
     <title>Accueil</title>
 </head>
