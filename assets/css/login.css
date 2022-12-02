@@ -54,13 +54,54 @@ button {
 
 #knight{
   z-index: 999;
-  transition: transform 4s;
+  transition: transform 0.1s;
   position : fixed;
-  margin-top: 275px;
+  margin-top: 270px;
 }
 
+@keyframes shake {
+  0% {
+    transform: scale(1.1) rotate(7deg);
+  }
+  10% {
+    transform: scale(1.1) rotate(-7deg);
+  }
+  20% {
+    transform: scale(1.1) rotate(1deg);
+  }
+  30% {
+    transform: scale(1.1) rotate(7deg);
+  }
+  40% {
+    transform: scale(1.1) rotate(1deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-7deg);
+  }
+  60% {
+    transform: scale(1.1) rotate(7deg);
+  }
+  70% {
+    transform: scale(1.1) rotate(-7deg);
+  }
+  80% {
+    transform: scale(1.1) rotate(1deg);
+  }
+  90% {
+    transform: scale(1.1) rotate(7deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(-7deg);
+  }
+  
+}
+.atEnd{
+  cursor: pointer;
+}
 .atEnd img:hover{
+  transition: transform 0.2s;
   transform: scale(1.1);
+  animation: shake 0.4s;
 }
 
 #knight img{
@@ -71,23 +112,28 @@ button {
 .bubble{
   position: absolute;
   width: 300px;
-  height: 70px;
+  height: 80px;
   border-radius: 20px;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #b58e8e;
+  border: 2px solid #ba7a7a;
   margin-left: -110px;
-  margin-top : -150px;
-  transition : 0.5s;
+  margin-top : -170px;
 }
 
 .bubble p {
-  color: rgb(0, 0, 0);
+  color: #ad5959;
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   font-weight: bold;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-right: 10px;
+}
+
+#register:disabled {
+  cursor: default;
+  background-color: rgb(168, 160, 160);
+  border : 2px solid #3c3c3c;
 }
