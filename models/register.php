@@ -13,6 +13,7 @@ function register($username, $password) {
     if($userInfo) {
         // If the username is already taken, redirect to the register page
         echo "Username already taken";
+        appearKnight();
     } else {
         // If the username is not taken, hash the password and insert the user in the database
         $hash = password_hash($password, PASSWORD_DEFAULT);

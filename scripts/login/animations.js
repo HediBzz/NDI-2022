@@ -12,7 +12,7 @@ const moveKnight = () => {
 var i = 2;
 var posX = 10;
 const animateKnight = () => {
-
+    knight.style.display = "block";
     registerButton.setAttribute("disabled", "disabled");
     // La background image de knight est égale à l'image créée
     if (posX > 380){
@@ -39,8 +39,6 @@ const endAnimation = () => {
     knight.classList.add('atEnd');
 }
 
-moveKnight();
-
 var bubble = null;
 const appearInstruction = () => {
     bubble = document.createElement('div');
@@ -64,3 +62,5 @@ const emptyUsernameAndEnableButton = () => {
     knight.removeEventListener('mouseout', disappearInstruction);
     knight.removeEventListener('click', emptyUsernameAndEnableButton);
 }
+
+moveKnight();
