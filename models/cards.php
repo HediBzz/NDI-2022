@@ -13,8 +13,18 @@ function getAllCards() {
 
 function getAllEnemies() {
     $bdd = Connexion::getInstance()->getBdd();
-    $req = $bdd->prepare('SELECT * FROM card WHERE isEnemy = 1');
+    $req = $bdd->prepare('SELECT * FROM card WHERE isEnemy = 1 and isEntity = 1');
     $req->execute();
+    $enemies = $req->fetchAll();
+    return $enemies;
+}
+
+function getEnemyFromBoss($idBoss) {
+    $bdd = Connexion::getInstance()->getBdd();
+    $req = $bdd->prepare('SELECT * FROM card WHERE isEnemy = 1 and isEntity = 1 and boss_id = :boss_id');
+    $req->execute(array(
+        'boss_id' => $idBoss
+    ));
     $enemies = $req->fetchAll();
     return $enemies;
 }
@@ -25,4 +35,12 @@ function getAllFriends() {
     $req->execute();
     $friends = $req->fetchAll();
     return $friends;
+}
+
+function getRandomBoss() {
+    $bdd = Connexion::getInstance()->getBdd();
+    $req = $bdd->prepare('SELECT * FROM boss ORDER BY RAND() LIMIT 1');
+    $req->execute();
+    $boss = $req->fetch();
+    return $boss;
 }

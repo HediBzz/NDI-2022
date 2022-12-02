@@ -17,8 +17,11 @@
 <body>
 
         <article class="deck">
-        <div class="hero" value="sida.png">
-            <h2>PV : 100</h2>
+        <div class="hero-infos">
+                <div class="hero enemy" value="<?= $boss['image'] ?>">
+                    <h2 class="player-HP">PV : <?= $boss['hp'] ?></h2>
+                </div>
+                <h2><?= $boss['name'] ?></h2>
             </div>
 
 
@@ -57,9 +60,13 @@ foreach($enemies as $card) {
         </article>
 
         <article class="deck">
-            <div class="hero" value="player.png">
-                <h2>PV : 100</h2>
+            <div class="hero-infos">
+                <div class="hero friend" value="player.png">
+                    <h2 class="player-HP">PV : 100</h2>
+                </div>
+                <h2><?= $_SESSION['name'] ?></h2>
             </div>
+
 
 
 
@@ -67,7 +74,7 @@ foreach($enemies as $card) {
 foreach($friends as $card) {
     ?>
     
-    <section id="card<?=$i?>" class="card<?= $card["id"]?> card can-play friend" value=<?php echo $card['image'] ?>>
+    <section id="card<?=$i?>" class="card<?= $card["id"]?> card friend" value=<?php echo $card['image'] ?>>
         <div class="card-header">
             <p class="card-price item"><?= $card['price'] ?></p>
             <p class="card-title"><?= $card['title'] ?></p>
