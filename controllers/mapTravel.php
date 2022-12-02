@@ -1,7 +1,7 @@
 <?php
-// require_once(PATH_MODELS . 'Connexion.php');
+require_once(PATH_MODELS . 'mapTravel.php');
 
-if(isset($_GET['0'])){
+if (isset($_GET['0'])) {
   $l0 = htmlspecialchars($_GET['0']);
   $l1 = htmlspecialchars($_GET['1']);
   $l2 = htmlspecialchars($_GET['2']);
@@ -18,11 +18,7 @@ if(isset($_GET['0'])){
   $l13 = htmlspecialchars($_GET['13']);
   $l14 = htmlspecialchars($_GET['14']);
 
-  $l0 = str_split($l0, );
-  var_dump($l0);
-
-
+  saveAllLines($l0);
 }
 
 require_once(PATH_VIEWS . 'mapTravel.php');
-

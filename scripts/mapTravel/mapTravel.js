@@ -182,25 +182,27 @@ function saveMap() {
   var url = "&";
 
   var rows = document.getElementsByClassName("row");
-  for(var i = 0; i < rows.length; i++) {
+  for (var i = 0; i < rows.length; i++) {
     url += i + "=";
     var rowsChildren = rows[i].children;
-    for(var j = 0; j < rowsChildren.length; j++) {
+    for (var j = 0; j < rowsChildren.length; j++) {
       var rowsChildrenChildren = rowsChildren[j].children;
-      if(rowsChildrenChildren.length == 0){
+      if (rowsChildrenChildren.length == 0) {
         url += "null";
-      }else{
-        url += rowsChildrenChildren.item(0).className.split(".")[0].split(" ")[2];
+      } else {
+        url += rowsChildrenChildren
+          .item(0)
+          .className.split(".")[0]
+          .split(" ")[2];
       }
-      if(j!=2) url += ",";
+      if (j != 2) url += ",";
     }
-    if(i!=rows.length-1) url+="&";
+    if (i != rows.length - 1) url += "&";
   }
 
   console.log(url);
 
-  window.location.href = "?page=mapTravel"+url;
+  window.location.href = "?page=mapTravel" + url;
 }
-
 
 // 0=combat,null,event
