@@ -2,6 +2,7 @@
 require_once(PATH_MODELS . 'mapTravel.php');
 
 if (isset($_GET['0'])) {
+
   $l0 = htmlspecialchars($_GET['0']);
   $l1 = htmlspecialchars($_GET['1']);
   $l2 = htmlspecialchars($_GET['2']);
@@ -18,7 +19,23 @@ if (isset($_GET['0'])) {
   $l13 = htmlspecialchars($_GET['13']);
   $l14 = htmlspecialchars($_GET['14']);
 
-  saveAllLines($l0);
+  saveAllLines(0,$l0);
+  saveAllLines(1,$l1);
+  saveAllLines(2,$l2);
+  saveAllLines(3,$l3);
+  saveAllLines(4,$l4);
+  saveAllLines(5,$l5);
+  saveAllLines(6,$l6);
+  saveAllLines(7,$l7);
+  saveAllLines(8,$l8);
+  saveAllLines(9,$l9);
+  saveAllLines(10,$l10);
+  saveAllLines(11,$l11);
+  saveAllLines(12,$l12);
+  saveAllLines(13,$l13);
+  saveAllLines(14,$l14);
+
+
 }
 
 require_once(PATH_VIEWS . 'mapTravel.php');
