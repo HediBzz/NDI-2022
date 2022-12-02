@@ -3,6 +3,15 @@
   padding: 0;
 }
 
+body{
+  display:flex;
+  justify-content: center;
+}
+
+#container-map{
+  width: 50%;
+}
+
 .container {
   height: 100vh;
 }
@@ -13,8 +22,8 @@
 }
 
 .column {
-  border: 1px solid black;
-  width: 50%;
+  /*border: 1px solid black;*/
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,18 +37,58 @@
   width: 50px;
   height: 50px;
 }
+
 .combat {
-  background-color: brown;
+  background-image: url("../images/combat.png");
 }
 .evenement {
-  background-color: green;
+  background-image: url("../images/evenement.png");
 }
-.repos {
-  background-color: blue;
+
+* {
+  margin: 0;
+  padding: 0;
 }
-.start {
-  background-color: yellow;
+
+body{
+  display:flex;
+  justify-content: center;
 }
+
+#container-map{
+  width: 50%;
+}
+
+.container {
+  height: 100vh;
+}
+
+.row {
+  height: 25%;
+  display: flex;
+}
+
+.column {
+  /*border: 1px solid black;*/
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.combat,
+.evenement,
+.repos,
+.start,
 .end {
-  background-color: red;
+  width: 50px;
+  height: 50px;
 }
+
+.combat {
+  background-image: url("../images/combat.png");
+}
+.evenement {
+  background-image: url("../images/evenement.png");
+}
+
