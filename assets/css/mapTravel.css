@@ -12,6 +12,21 @@ body{
   width: 50%;
 }
 
+body{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: brown;
+  height: 100vh;
+  z-index: -99;
+  position: relative;
+}
+
+#container-map{
+  width: 50%;
+}
+
 .container {
   height: 100vh;
 }
@@ -23,7 +38,7 @@ body{
 
 .column {
   border: 1px solid black;
-  width: 30%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,11 +52,18 @@ body{
   width: 50px;
   height: 50px;
 }
-
 .combat {
-  background-image: url("../images/combat.png");
+  background-color: brown;
 }
 .evenement {
-  background-image: url("../images/evenement.png");
+  background-color: green;
 }
-
+.repos {
+  background-color: blue;
+}
+.start {
+  background-color: yellow;
+}
+.end {
+  background-color: red;
+}
