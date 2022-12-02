@@ -10,6 +10,7 @@
     <link rel="stylesheet" href=<?php echo PATH_CSS . "card.css" ?>>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="<?= PATH_SCRIPTS ?>login/login.js" defer></script>
+    <script src="<?= PATH_SCRIPTS ?>App.js" defer type="module"></script>
     <title>Accueil</title>
 </head>
 
@@ -22,10 +23,11 @@
 
 
 <?php
-foreach($cards as $card) {
+$i = 0;
+foreach($enemies as $card) {
     ?>
     
-    <section id="card<?= $card["id"]?>e" class="card" value=<?php echo $card['image'] ?>>
+    <section id="card<?=$i?>" class="card<?= $card["id"]?> card enemy" value=<?php echo $card['image'] ?>>
         <div class="card-header">
             <p class="card-price item"><?= $card['price'] ?></p>
             <p class="card-title"><?= $card['title'] ?></p>
@@ -37,7 +39,7 @@ foreach($cards as $card) {
                 <?php
                 if($card['isEntity']) {
                     ?>
-                    <p class="card-HP item"><?= $card['isEntity'] ?></p>
+                    <p class="card-HP item"><?= $card['hp'] ?></p>
                     <?php
                 }
                 ?>
@@ -46,17 +48,10 @@ foreach($cards as $card) {
         </div>
     </section>
 
-    <script>
-        var card = document.querySelector('#card<?= $card["id"]?>e');
-        // Put the src of the background-image in the css
-        card.style.backgroundImage = "url(assets/images/" + card.getAttribute('value') + ")";
-        card.addEventListener('click', function() {
-            // Put the src of the background-image in the css
-            card.style.backgroundImage = "url(assets/images/" + card.getAttribute('value') + ")";
-        });
-    </script>
+    
         
     <?php
+    $i++;
 }
 ?>
         </article>
@@ -66,10 +61,10 @@ foreach($cards as $card) {
 
 
 <?php
-foreach($cards as $card) {
+foreach($friends as $card) {
     ?>
     
-    <section id="card<?= $card["id"]?>j" class="card" value=<?php echo $card['image'] ?>>
+    <section id="card<?=$i?>" class="card<?= $card["id"]?> card can-play friend" value=<?php echo $card['image'] ?>>
         <div class="card-header">
             <p class="card-price item"><?= $card['price'] ?></p>
             <p class="card-title"><?= $card['title'] ?></p>
@@ -81,7 +76,7 @@ foreach($cards as $card) {
                 <?php
                 if($card['isEntity']) {
                     ?>
-                    <p class="card-HP item"><?= $card['isEntity'] ?></p>
+                    <p class="card-HP item"><?= $card['hp'] ?></p>
                     <?php
                 }
                 ?>
@@ -90,18 +85,9 @@ foreach($cards as $card) {
         </div>
     </section>
 
-    <script>
-        var card = document.querySelector('#card<?= $card["id"]?>j');
-        // Put the src of the background-image in the css
-        card.style.backgroundImage = "url(assets/images/" + card.getAttribute('value') + ")";
-
-        card.addEventListener('click', function() {
-            card.classList.toggle('selected');
-            console.log(card);
-        });
-    </script>
         
     <?php
+    $i++;
 }
 ?>
         <article>

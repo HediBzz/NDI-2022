@@ -135,3 +135,35 @@
     flex-wrap: wrap; 
     justify-content: center;
 }
+
+.can-play {
+    animation: can-play 2s infinite;
+}
+
+.is-selected {
+    animation: is-selected 2s infinite;
+}
+
+@keyframes can-play {
+    0% {
+        box-shadow: 0 0 15px rgba(30, 255, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(30, 255, 0, 1);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(30, 255, 0, 0.4);
+    }
+}
+
+@keyframes is-selected {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(255, 0, 0, 1);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    }
+}
