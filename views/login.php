@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="knight.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="<?= PATH_SCRIPTS ?>login/login.js" defer></script>
+    <script src="<?= PATH_SCRIPTS ?>login/animations.js" defer></script>
     <script src="views/animations.js" defer></script>
     <title>Accueil</title>
 </head>
@@ -23,8 +24,8 @@
             </div>
             <form id="login-form" action="?page=login" method="post">
                 <div class="login-item">
-                    <label for="username">Nom d'utilisateur</label>
-                    <input type="text" name="username" id="username">
+                    <label for="usernameC">Nom d'utilisateur</label>
+                    <input type="text" name="usernameC" id="usernameC">
                 </div>
                 <div class="login-item">
                     <label for="password">Mot de passe</label>
@@ -48,14 +49,21 @@
                 <div class="login-item">
                     <label for="passwordConfirm">Confirmer le mot de passe</label>
                     <input type="password" name="password" id="password3">
-                    <span class="form-item-icon-left material-symbols-outlined" id="password-confirm3" onclick="visibility('password', 3)">visibility_off</span>
+                    <span class="form-item-icon-left material-symbols-outlined" id="password-visibility3" onclick="visibility('password', 3)">visibility_off</span>
                 </div>
                 <div class="login-item">
-                    <button id="register" type="submit" name="register">S'inscrire</button>
+                    <button id="register" type="submit" name="register" onclick="moveKnight()">S'inscrire</button>
                 </div>
             </form>
         </article>
     </div>
+    <?php require_once(PATH_MODELS) ?>
+    <?php function appearKnight() { ?>
+        <script>
+            document.getElementById("knight").style.display = "block";
+            moveKnight();
+        </script>
+    <?php } ?>
 
 </body>
 

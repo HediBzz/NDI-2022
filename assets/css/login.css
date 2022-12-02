@@ -53,6 +53,7 @@ button {
 }
 
 #knight{
+  display: none;
   z-index: 999;
   transition: transform 0.1s;
   position : fixed;

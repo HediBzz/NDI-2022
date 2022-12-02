@@ -3,6 +3,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: brown;
+    height: 100vh;
+    z-index: -99;
+    position: relative;
 }
 
 #btn-container {
@@ -10,4 +14,146 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+#bookC {
+    width:100%;
+    height:100%;
+    position:absolute;
+    right: 0;
+    top: 0vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1.2s ease-in;
+}
+
+#book {
+    width: 6%;
+    caret-color: transparent;
+    transition: transform .2s;
+}
+
+#book:hover{
+    transform: scale(2);
+    cursor:pointer;
+}
+
+#bigBookC {
+    pointer-events: none;
+    width:160vh;
+    height:90vh;
+    position:fixed;
+    top: -100vh;
+    display:flex;
+}
+
+#bigBook{
+    pointer-events: none;
+    width:100%;
+}
+
+
+
+#croix1C {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: -56vh;
+    display: none;
+    bottom: 16%;
+    z-index: 1;
+}
+#croix1{
+    width: 136%;
+    height: 16%;
+    transition: all 0.2s ease-in;
+}
+
+#croix2C {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 54%;
+    display: none;
+    top: 31%;
+    height: 10%;
+    width: 6%;
+    z-index: 1;
+}
+#croix2 {
+    width: 84%;
+    height: 101%;
+    right: 33.7%;
+    top: 36%;
+    position: absolute;
+    transition: all 0.2s ease-in;
+}
+
+#croix3C{
+    width:132vh;
+    height:118vh;
+    position:fixed;
+    top: 26.9vh;
+    display:none;
+}
+#croix3 {
+    width: 9%;
+    height: 9%;
+    right: 59%;
+    top: 36%;
+    position: absolute;
+    transition:all 0.2s ease-in;
+}
+
+#croix4C {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 75%;
+    display: none;
+    top: 60%;
+    height: 10%;
+    width: 6%;
+    z-index: 1;
+}
+#croix4 {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    right: -1%;
+    top: 28.5%;
+    transition: all 0.2s ease-in;
+}
+
+#croix1:hover, #croix2:hover, #croix3:hover, #croix4:hover {
+    transform: scale(1.4);
+    cursor:pointer;
+}
+
+.bookAnim{
+    animation: bookHaut 2.5s;
+}
+
+.bigBookAnim{
+    animation: bigBookBas 1.5s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes bookHaut {
+    0% {
+        top:0;
+      }
+    100% {
+        top: -100vh;
+  }
+}
+
+@keyframes bigBookBas {
+    0% {
+        top:-100vh;
+      }
+    100% {
+        top: 5vh;
+  }
 }
