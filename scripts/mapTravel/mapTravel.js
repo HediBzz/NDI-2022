@@ -130,14 +130,14 @@ function createNodeAlways(i) {
   if (randomType < 0.7) {
     node.classList.add("node");
     node.classList.add("combat");
-    a.href = "../combat/combat.php";
+    a.href = "../views/arena.php";
     img.src = "../../assets/images/combat.png";
     img.width = 50;
     img.height = 50;
   } else {
     node.classList.add("node");
     node.classList.add("evenement");
-    a.href = "../combat/evenement.php";
+    a.href = "../views/event.php";
     img.src = "../../assets/images/evenement.png";
     img.width = 50;
     img.height = 50;
