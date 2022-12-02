@@ -30,6 +30,8 @@ function createMap() {
       var nodeRepos = createNodeAlways(i);
       nodeRepos.className = "repos";
       column1.appendChild(nodeRepos);
+      nodeRepos.classList.add("center");
+      nodeRepos.classList.add(i);
       container.appendChild(row);
       continue;
     }
@@ -95,7 +97,7 @@ function createNodeAlways(i) {
   a.appendChild(img);
   node.appendChild(a);
 
-  if(i == 0){
+  if (i == 0) {
     node.classList.add("node");
     node.classList.add("start");
     img.src = "../assets/images/start.png";
@@ -105,7 +107,7 @@ function createNodeAlways(i) {
     return node;
   }
 
-  if(i == 14){
+  if (i == 14) {
     node.classList.add("node");
     node.classList.add("end");
     img.src = "../assets/images/start.png";
@@ -115,7 +117,7 @@ function createNodeAlways(i) {
     return node;
   }
 
-  if(i % 5 == 0){
+  if (i % 5 == 0) {
     node.classList.add("node");
     node.classList.add("repos");
     img.src = "../assets/images/repos.png";
@@ -129,22 +131,21 @@ function createNodeAlways(i) {
   if (randomType < 0.7) {
     node.classList.add("node");
     node.classList.add("combat");
-    a.href="../combat/combat.php";
+    a.href = "../combat/combat.php";
     img.src = "../../assets/images/combat.png";
     img.width = 50;
     img.height = 50;
   } else {
     node.classList.add("node");
     node.classList.add("evenement");
-    a.href="../combat/evenement.php";
+    a.href = "../combat/evenement.php";
     img.src = "../../assets/images/evenement.png";
     img.width = 50;
     img.height = 50;
   }
 
   var randomTranslateY = Math.random() * 0.4 + 0.25;
-  var randomTranslateX = Math.random() * 0.40 + 0.25;
-
+  var randomTranslateX = Math.random() * 0.4 + 0.25;
 
   var randomXPos = Math.random();
   if (randomXPos < 0.5) {
@@ -179,20 +180,54 @@ function saveMap() {
   var allEvenement = document.getElementsByClassName("evenement");
   var allRepos = document.getElementsByClassName("repos");
 
-  console.log(allCombat);
-  console.log(allEvenement);
-  console.log(allRepos);
+  var allCombatNumPos = "";
 
-  // Save allCombat in URL and position
-  var allCombatURL = "";
-  var allCombatPosition = "";
   for (var i = 0; i < allCombat.length; i++) {
-    // split allCombat with space and save [0] in allCombatURL and [3] in allCombatPosition
-    var split = allCombat[i].innerHTML.split(" ");
-    allCombatURL += split[0] + " ";
-    allCombatURL   += split[3] + " ";
+    allCombatNumPos +=
+      "combat" +
+      i +
+      "=" +
+      allCombat[i].className.split(" ")[0] +
+      "," +
+      allCombat[i].className.split(" ")[3] +
+      "," +
+      allCombat[i].className.split(" ")[2] +
+      "&";
   }
-  console.log(allCombatURL);
+
+  var allEvenementNumPos = "";
+
+  for (var i = 0; i < allEvenement.length; i++) {
+    allEvenementNumPos +=
+      "eve" +
+      i +
+      "=" +
+      allEvenement[i].className.split(" ")[0] +
+      "," +
+      allEvenement[i].className.split(" ")[3] +
+      "," +
+      allEvenement[i].className.split(" ")[2] +
+      "&";
+  }
+
+  var allReposNumPos = "";
+
+  for (var i = 0; i < allRepos.length; i++) {
+    allReposNumPos +=
+      "repos" +
+      i +
+      "=" +
+      allRepos[i].className.split(" ")[2] +
+      "," +
+      allRepos[i].className.split(" ")[1] +
+      "," +
+      allRepos[i].className.split(" ")[0] +
+      "&";
+  }
+
+  console.log(allCombatNumPos);
+  console.log(allEvenementNumPos);
+  console.log(allReposNumPos);
 }
 
 saveMap();
